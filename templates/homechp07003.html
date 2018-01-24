@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js">
+    </script>
+
+    <script type="text/javascript">
+      var map;
+      function initialize() {
+        var mapOptions = {
+          center: new google.maps.LatLng(44.669121, -74.986894),
+          zoom: 12
+        };
+        map = new google.maps.Map(document.getElementById("map-canvas"),mapOptions);
+        google.maps.event.addListener(map, 'click', function(event){   
+          placeMarker(event.latLng);
+        });
+      }
+      
+      function placeMarker(location) {
+      var marker = new google.maps.Marker({
+        position: location,
+        map: map
+      });
+      }
+      console.log("A message");
+      console.log("The value of a is: " + a);
+     </script>
+
+   </head>
+     <body onload="initialize()">
+     <div id="map-canvas" style="width:80%;
+       height:800px;"></div>
+     </body>
+</html>

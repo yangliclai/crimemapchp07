@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js">
+    </script>
+
+    <script type="text/javascript">
+      function initialize() {
+        var mapOptions = {
+          center: new google.maps.LatLng(44.669121, -74.986894),
+          zoom: 12
+        };
+        var map = new google.maps.Map(document.getElementById("map-canvas"),mapOptions);
+      }
+    console.log("A message");
+    console.log("The value of a is: " + a);
+     </script>
+
+   </head>
+     <body onload="initialize()">
+     <div id="map-canvas" style="width:80%;
+       height:800px;"></div>
+     </body>
+</html>
